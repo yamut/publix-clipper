@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Publix coupon clipper",
+  "author": "Dan Mattern",
+  "description": "Clips all of the publix coupons because nobody has time for that manual shit",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon16.png",
+    "128": "icon128.png" },
+  "permissions": [
+    "contextMenus"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.publix.com/savings/digital-coupons"],
+      "js": ["clip.js"]
+    }
+  ],
+  "background": {
+    "persistent": true,
+    "scripts": ["main.js"]
+  }
+}
